@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Family Root — Family Genealogy</title>
+<meta name="theme-color" content="#151827"><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">✦</div>
+      <div>
+        <div class="brand-title">Our Family Root</div>
+        <div class="brand-sub">A living map of our family</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <label class="search"><span>⌕</span><input id="search" placeholder="Search a family member…" autocomplete="off"></label>
+      <button id="themeBtn" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☾</button>
+      <button id="addBtn" class="primary">＋ Add Member</button>
+    </div>
+  </header>
+  <nav class="toolbar" aria-label="Family tools">
+    <div class="toolbar-left">
+      <button id="resetBtn">↺ Reset</button>
+      <button id="focusBtn" class="soft">◎ Focus branch</button>
+      <button id="timelineBtn" class="soft">◷ Timeline</button>
+      <button id="statsBtn" class="soft">✦ Insights</button>
+      <button id="infoBtn" class="soft">ⓘ More Details</button>
+      <button id="meBtn" class="soft">⌂ My family</button>
+    </div>
+    <div class="toolbar-right">
+      <button id="exportBtn">⇩ Backup</button>
+    </div>
+  </nav>
+  <main class="workspace">
+    <section id="viewport" class="viewport">
+      <div id="canvas" class="canvas">
+        <svg id="links" class="links"></svg>
+        <div id="tree" class="tree"></div>
+      </div>
+      <div class="hint">Drag to pan · Wheel to zoom · Click a member · Double-click to focus</div>
+      <div class="zoom">
+        <button id="zoomOut" aria-label="Zoom out">−</button>
+        <span id="zoomValue">100%</span>
+        <button id="zoomIn" aria-label="Zoom in">＋</button>
+      </div>
+    </section>
+    <aside id="side" class="side">
+      <button id="sideClose" class="side-close" type="button" aria-label="Close panel">×</button>
+      <div id="sideContent">
+        <div class="side-empty">
+          <div class="empty-icon">⌘</div>
+          <h2>Select a member</h2>
+          <p>Choose any card to explore their family connections, branch and personal details.</p>
+        </div>
+      </div>
+    </aside>
+  </main>
+</div>
+<div id="sideBackdrop" class="side-backdrop hidden"></div>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <div>
+        <div id="modalKicker" class="kicker">NEW MEMBER</div>
+        <h2 id="modalTitle">Add family member</h2>
+      </div>
+      <button id="closeModal" class="icon-btn" aria-label="Close">×</button>
+    </div>
+  <form id="personForm">
+    <input type="hidden" id="personId">
+    <div class="photo-row">
+      <div id="photoPreview" class="photo-preview">+</div>
+        <div>
+          <label class="file-label">Profile photo
+            <input id="personPhoto" type="file" accept="image/*">
+          </label>
+        <div class="field-help">Stored locally in your browser. Never uploaded.</div>
+      </div>
+    </div>
+    <div class="member-type">
+      <div class="member-type-title">Family member type</div>
+      <div class="type-switch" role="group" aria-label="Family member type">
+        <button type="button" class="type-option active" id="singleTypeBtn">Single person</button>
+        <button type="button" class="type-option" id="marriedTypeBtn">Husband + Wife</button>
+      </div>
+      <div class="field-help">Single people use one name. For a married couple, enter both names below — they will be saved as one family node.</div>
+    </div>
+    <div id="singleFields">
+      <label>Display name<input id="personName" placeholder="e.g. Rahul"></label>
+    </div>
+    <div id="coupleFields" class="hidden">
+      <div class="form-grid"><label>Husband<input id="husbandName" placeholder="e.g. Rahul"></label><label>Wife<input id="wifeName" placeholder="e.g. Shipla"></label></div>
+    </div>
+    <label>Relationship / note<input id="personNote" placeholder="Optional family note"></label>
+    <div id="singleBirthFields" class="form-grid"><label>Birth date<input id="birthDate" type="date"></label><label>Birth place<input id="birthPlace" placeholder="e.g. Ujjain, Madhya Pradesh"></label></div>
+    <div id="coupleBirthFields" class="hidden">
+      <div class="section-label">Birth details</div>
+      <div class="form-grid"><label>Husband birth date<input id="husbandBirthDate" type="date"></label><label>Wife birth date<input id="wifeBirthDate" type="date"></label></div>
+      <div class="form-grid"><label>Husband birth place<input id="husbandBirthPlace" placeholder="e.g. Ujjain, Madhya Pradesh"></label><label>Wife birth place<input id="wifeBirthPlace" placeholder="e.g. Indore, Madhya Pradesh"></label></div>
+      <div class="field-help">For a married family node, enter husband and wife birth details separately.</div>
+    </div>
+    <div class="form-grid"><label>Death year<input id="deathYear" inputmode="numeric" placeholder="Optional"></label></div>
+    <label>Parent / family connection<select id="parentSelect"><option value="">No parent (top-level)</option></select></label>
+    <div class="form-grid"><label>Birth order among siblings<input id="birthOrder" type="number" min="1" step="1" placeholder="e.g. 1"></label></div>
+    <div class="field-help">Use 1 for the eldest child, 2 for the second child, 3 for the third, and so on. This keeps the card position fixed even after editing or re-adding a member.</div>
+    <div class="form-actions"><button type="button" id="cancelModal">Cancel</button><button class="primary" type="submit">Save member</button></div>
+  </form>
+</div></div>
+
+<div id="insights" class="modal hidden"><div class="modal-card insights-card"><div class="modal-head"><div><div class="kicker">FAMILY OVERVIEW</div><h2>Family Insights</h2><p class="modal-sub">A quick snapshot of the family tree.</p></div><button id="closeInsights" class="icon-btn" aria-label="Close">×</button></div><div id="insightsBody" class="insights-grid"></div></div></div>
+
+<div id="info" class="modal hidden">
+  <div class="modal-card info-card">
+    <div class="modal-head">
+      <div>
+        <div class="kicker">FAMILY INFORMATION</div>
+        <h2>Family Information</h2>
+        <p class="modal-sub">A few important details about our family.</p>
+      </div>
+      <button id="closeInfo" class="icon-btn" aria-label="Close">×</button>
+    </div>
+    <div class="info-content">
+      <img class="info-image" src="chitragupt-ji.jpg" alt="Shri Chitragupt Ji — Karasth Family">
+      <div class="info-details">
+        <div class="info-row">
+          <span class="info-label">Kul Devi, Devta / Gotra : </span>
+          <strong>UNKNOWN, Jhunjharji Maharaj / Shilalpuriya</strong>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Address of the deity</span>
+          <strong>Chikanya village, Garoth tehsil, Mandsaur district, Madhya Pradesh, India</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="photoLightbox" class="photo-lightbox hidden" aria-hidden="true">
+  <button id="closePhotoLightbox" class="photo-lightbox-close" type="button" aria-label="Close photo">×</button>
+  <img id="fullPhoto" src="" alt="Full size profile photo">
+</div>
+
+<div id="timeline" class="modal hidden"><div class="modal-card timeline-card">
+  <div class="modal-head"><div><div class="kicker">FAMILY STORY</div><h2>Family Timeline</h2><p class="modal-sub">Birth years you've added, plus the original family structure.</p></div><button id="closeTimeline" class="icon-btn" aria-label="Close">×</button></div>
+  <div id="timelineBody" class="timeline-body"></div>
+</div></div>
+
+<script src="family-data.js"></script><script src="app.js"></script>
+</body></html>
