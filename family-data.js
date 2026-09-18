@@ -92,7 +92,7 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789409595299",
-      "name": "Unknown",
+      "name": "Late Nathi bai",
       "husband": "",
       "wife": "",
       "note": "Beti",
@@ -290,8 +290,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789411178866",
-      "name": "unknown - Rashmi",
-      "husband": "unknown",
+      "name": "Anshuman ji - Rashmi",
+      "husband": "Anshuman ji",
       "wife": "Rashmi",
       "note": "Beti",
       "death": "",
@@ -524,8 +524,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789412545004",
-      "name": "Late Shivkumar - Unknown",
-      "husband": "Late Shivkumar",
+      "name": "Late Shiv Kumar - Unknown",
+      "husband": "Late Shiv Kumar",
       "wife": "Unknown",
       "note": "Beta",
       "death": "",
@@ -578,7 +578,7 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789412713366",
-      "name": "Ashish",
+      "name": "Late Ashish",
       "husband": "",
       "wife": "",
       "note": "Beta",
@@ -686,9 +686,9 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789413065158",
-      "name": "Late Sandeep - unknown",
+      "name": "Late Sandeep - Mamta",
       "husband": "Late Sandeep",
-      "wife": "unknown",
+      "wife": "Mamta",
       "note": "Beta",
       "death": "",
       "photo": "",
@@ -722,8 +722,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789413556404",
-      "name": "Late Kelash - Late Kusum",
-      "husband": "Late Kelash",
+      "name": "Late Kailash - Late Kusum",
+      "husband": "Late Kailash",
       "wife": "Late Kusum",
       "note": "Beti",
       "death": "",
@@ -776,8 +776,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789413679850",
-      "name": "unknown - Sweta(Tina)",
-      "husband": "unknown",
+      "name": "Prakhar ji - Sweta(Tina)",
+      "husband": "Prakhar ji",
       "wife": "Sweta(Tina)",
       "note": "Beti",
       "death": "",
@@ -884,7 +884,7 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789452605757",
-      "name": "Laxchit",
+      "name": "Lakshit",
       "husband": "",
       "wife": "",
       "note": "Beta",
@@ -920,7 +920,7 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789474792483",
-      "name": "Julie",
+      "name": "Juhi",
       "husband": "",
       "wife": "",
       "note": "Beti",
@@ -974,8 +974,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789475500397",
-      "name": "Rameshkumar - Uma",
-      "husband": "Rameshkumar",
+      "name": "Ramesh Kumar - Uma",
+      "husband": "Ramesh Kumar",
       "wife": "Uma",
       "note": "Beta",
       "death": "",
@@ -1010,8 +1010,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789475626433",
-      "name": "Shani - unknown",
-      "husband": "Shani",
+      "name": "Sunny - unknown",
+      "husband": "Sunny",
       "wife": "unknown",
       "note": "Beta",
       "death": "",
@@ -1066,11 +1066,6 @@ window.FAMILY_SEED = {
   "relationships": [
     {
       "type": "parent-child",
-      "parent": "p-1789412564249",
-      "child": "p-1789412713366"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789412776806",
       "child": "p-1789412829074"
     },
@@ -1083,11 +1078,6 @@ window.FAMILY_SEED = {
       "type": "parent-child",
       "parent": "p-1789413700557",
       "child": "p-1789413773238"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789452505983",
-      "child": "p-1789452605757"
     },
     {
       "type": "parent-child",
@@ -1131,18 +1121,8 @@ window.FAMILY_SEED = {
     },
     {
       "type": "parent-child",
-      "parent": "p-1789413576150",
-      "child": "p-1789413679850"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789411089684",
       "child": "p-1789411132026"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789411089684",
-      "child": "p-1789411178866"
     },
     {
       "type": "parent-child",
@@ -1171,11 +1151,6 @@ window.FAMILY_SEED = {
     },
     {
       "type": "parent-child",
-      "parent": "p-1789412035640",
-      "child": "p-1789474792483"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789412057707",
       "child": "p-1789474847004"
     },
@@ -1183,11 +1158,6 @@ window.FAMILY_SEED = {
       "type": "parent-child",
       "parent": "p-1789412057707",
       "child": "p-1789474885176"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789409306612",
-      "child": "p-1789409595299"
     },
     {
       "type": "parent-child",
@@ -1207,11 +1177,6 @@ window.FAMILY_SEED = {
     {
       "type": "parent-child",
       "parent": "p-1789409720796",
-      "child": "p-1789475500397"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789409720796",
       "child": "p-1789412564249"
     },
     {
@@ -1226,18 +1191,8 @@ window.FAMILY_SEED = {
     },
     {
       "type": "parent-child",
-      "parent": "p-1789412545004",
-      "child": "p-1789413065158"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789409539094",
       "child": "p-1789409720796"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789409720796",
-      "child": "p-1789412545004"
     },
     {
       "type": "parent-child",
@@ -1277,11 +1232,6 @@ window.FAMILY_SEED = {
     {
       "type": "parent-child",
       "parent": "p-1789409975576",
-      "child": "p-1789413556404"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789409975576",
       "child": "p-1789413576150"
     },
     {
@@ -1316,11 +1266,6 @@ window.FAMILY_SEED = {
     },
     {
       "type": "parent-child",
-      "parent": "p-1789475500397",
-      "child": "p-1789475626433"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789412564249",
       "child": "p-1789412776806"
     },
@@ -1348,6 +1293,61 @@ window.FAMILY_SEED = {
       "type": "parent-child",
       "parent": "p-1789412014337",
       "child": "p-1789452530484"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789412035640",
+      "child": "p-1789474792483"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789452505983",
+      "child": "p-1789452605757"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789409975576",
+      "child": "p-1789413556404"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789475500397",
+      "child": "p-1789475626433"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789409720796",
+      "child": "p-1789412545004"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789409720796",
+      "child": "p-1789475500397"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789413576150",
+      "child": "p-1789413679850"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789412545004",
+      "child": "p-1789413065158"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789411089684",
+      "child": "p-1789411178866"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789409306612",
+      "child": "p-1789409595299"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789412564249",
+      "child": "p-1789412713366"
     }
   ],
   "roots": [
