@@ -434,8 +434,8 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789411569996",
-      "name": "Late Basantkumar - Late Pushpa",
-      "husband": "Late Basantkumar",
+      "name": "Late Basant kumar - Late Pushpa",
+      "husband": "Late Basant kumar",
       "wife": "Late Pushpa",
       "note": "Beta",
       "death": "",
@@ -632,7 +632,7 @@ window.FAMILY_SEED = {
     },
     {
       "id": "p-1789412795906",
-      "name": "Mihikaaa(Mishi)",
+      "name": "Mihikaa(Mishi)",
       "husband": "",
       "wife": "",
       "note": "Beti",
@@ -1092,11 +1092,6 @@ window.FAMILY_SEED = {
     {
       "type": "parent-child",
       "parent": "p-1789412744126",
-      "child": "p-1789412795906"
-    },
-    {
-      "type": "parent-child",
-      "parent": "p-1789412744126",
       "child": "p-1789412809289"
     },
     {
@@ -1241,11 +1236,6 @@ window.FAMILY_SEED = {
     },
     {
       "type": "parent-child",
-      "parent": "p-1789409356169",
-      "child": "p-1789411569996"
-    },
-    {
-      "type": "parent-child",
       "parent": "p-1789411569996",
       "child": "p-1789412057707"
     },
@@ -1348,6 +1338,16 @@ window.FAMILY_SEED = {
       "type": "parent-child",
       "parent": "p-1789412564249",
       "child": "p-1789412713366"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789409356169",
+      "child": "p-1789411569996"
+    },
+    {
+      "type": "parent-child",
+      "parent": "p-1789412744126",
+      "child": "p-1789412795906"
     }
   ],
   "roots": [
